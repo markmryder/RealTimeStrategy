@@ -8,6 +8,12 @@ public class Unit : NetworkBehaviour
 {
     [SerializeField] private UnityEvent onSelected = null;
     [SerializeField] private UnityEvent onDeSelected = null;
+	[SerializeField] private UnitMovement unitMovement = null;
+
+	public UnitMovement GetUnitMovement()
+	{
+		return unitMovement;
+	}
 
 
 	#region Client
