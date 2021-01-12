@@ -8,6 +8,11 @@ public class Targeter : NetworkBehaviour
 	private Targetable target;
 
 
+	public Targetable GetTarget()
+	{
+		return target;
+	}
+
 	#region Server
 	[Command]
     public void CmdSetTarget(GameObject targetGameObject)
