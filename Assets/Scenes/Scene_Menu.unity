@@ -306,14 +306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1272126737142039577, guid: 26f3487135859784d94fd3840eade334, type: 3}
-      propertyPath: onlineScene
-      value: Assets/Scenes/Scene_Map.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 1272126737142039577, guid: 26f3487135859784d94fd3840eade334, type: 3}
-      propertyPath: offlineScene
-      value: Assets/Scenes/Scene_Menu.unity
-      objectReference: {fileID: 0}
     - target: {fileID: 1272126737142039578, guid: 26f3487135859784d94fd3840eade334, type: 3}
       propertyPath: m_RootOrder
       value: 2

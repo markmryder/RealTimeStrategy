@@ -17,13 +17,13 @@ public class RTSPlayer : NetworkBehaviour
 	public override void OnStartServer()
 	{
 		Unit.ServerOnUnitSpawned += ServerHandleUnitSpawned;
-		Unit.ServerOnUnitSpawned += ServerHandleUnitDespawned;
+		Unit.ServerOnUnitDespawned += ServerHandleUnitDespawned;
 	}
 
 	public override void OnStopServer()
 	{
 		Unit.ServerOnUnitSpawned -= ServerHandleUnitSpawned;
-		Unit.ServerOnUnitSpawned -= ServerHandleUnitDespawned;
+		Unit.ServerOnUnitDespawned -= ServerHandleUnitDespawned;
 	}
 
 	private void ServerHandleUnitSpawned(Unit unit)
@@ -47,14 +47,14 @@ public class RTSPlayer : NetworkBehaviour
 		if(NetworkServer.active) { return; }
 
 		Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
-		Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitDespawned;
+		Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
 	}
 	public override void OnStopClient()
 	{
 		if (!isClientOnly || !hasAuthority) { return; }
 
 		Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
-		Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitDespawned;
+		Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
 	}
 	private void AuthorityHandleUnitSpawned(Unit unit)
 	{
